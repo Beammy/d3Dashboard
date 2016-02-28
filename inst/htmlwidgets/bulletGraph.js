@@ -6,11 +6,8 @@ HTMLWidgets.widget({
 
   factory: function(el, width, height) {
     
-  d3.select(el).append("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .append("g");
-  
+    var bullet = el;
+
   return {
     renderValue: function(el, x) {
   
@@ -29,15 +26,16 @@ HTMLWidgets.widget({
       .width(width)
       .height(height);
   
-      var svg = d3.select("body").selectAll("svg")
+  
+      var svg = d3.select(bullet).selectAll("svg")
         .data(el.data)
-      .enter().append("svg")
-        .attr("class", "bullet")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-        .call(chart);
+        .enter().append("svg")
+          .attr("class", "bullet")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+          .call(chart);
   
       // set attributes ranges
       var ranges0 = svg.selectAll("rect.range.s0");

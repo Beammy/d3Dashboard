@@ -10,7 +10,7 @@ dataPrep <- function(lData) {
     tmp[[3]] <- lData$range[[i]]
     tmp[[4]] <- lData$measures[[i]]
     tmp[[5]] <- lData$markers[[i]]
-    retList[[i+1]] <- tmp
+    retList[[i]] <- tmp
   }
   return(retList)
 }
