@@ -8,4 +8,8 @@ Author: Dr. Simon Müller
 Maintainer: Dr. Simon Müller <info@muon-stat.com>
 License: GPL (>= 3)
 Imports:
-    jsonlite
+    jsonlite,
+    htmlwidgets,
+    htmltools
+Suggests:
+    shiny

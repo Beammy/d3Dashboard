@@ -1,7 +1,7 @@
 dependencies:
   - name: d3
-    version: 3.4.13
-    src: "htmlwidgets/lib/d3-3.4.13"
+    version: 3.5.16
+    src: "htmlwidgets/lib/d3"
     script: d3.min.js
   - name: bullet
     version: 1.0

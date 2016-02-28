@@ -85,7 +85,7 @@ bulletGraph <- function (
   # create widget
   htmlwidgets::createWidget(
     name = "bulletGraph",
-    x = list(root = root, options = options),
+    x = list(data = root, options = options),
     width = width,
     height = height,
     htmlwidgets::sizingPolicy(viewer.suppress     = TRUE,
